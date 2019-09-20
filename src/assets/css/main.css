@@ -1,0 +1,23 @@
+:root {
+  /* layout variables */
+  --o-sm-s: 8px;
+  --o-sm-m: 16px;
+  --o-sm-l: 24px;
+  --o-md-s: 32px;
+  --o-md-m: 40px;
+  --o-md-l: 48px;
+  --o-lg-s: 56px;
+  --o-lg-m: 64px;
+  --o-lg-l: 72px;
+  --o-xl-s: 80px;
+  --o-xl-m: 88px;
+  --o-xl-l: 96px;
+
+  /* palette variables */
+  --c-primary: #78508c;
+  --c-secondary: white;
+  --c-accent: #0085ff;
+  --c-success: #82ba0c;
+  --c-warning: #ffb400;
+  --c-danger: #da0000;
+}
