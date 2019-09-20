@@ -1,6 +1,5 @@
 <template>
-  <Navbar></Navbar>
-  <!-- <h1>HELLO YES ITS ME VUE</h1> -->
+  <Navbar brand="Thread name"></Navbar>
 </template>
 
 <script>
