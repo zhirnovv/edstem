@@ -1,0 +1,26 @@
+.SearchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 24px;
+  width: 24px;
+
+  margin-right: var(--o-sm-m);
+
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.SearchButton:hover {
+  opacity: 0.7;
+}
+
+.SearchButton.SearchButton_active:hover {
+  opacity: 0.7;
+}
