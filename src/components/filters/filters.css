@@ -1,0 +1,126 @@
+.Filter__shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  z-index: 500;
+
+  background: rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 0.2s ease;
+}
+
+.Filter__shadow_open {
+  visibility: visible;
+  opacity: 1;
+  z-index: 500;
+}
+
+.Filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 88px;
+  z-index: 700;
+
+  background: white;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+
+  transition: top 0.2s ease;
+}
+
+.Filter__withSearchbar {
+  top: 48px;
+}
+
+.Filter__toggler {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  width: 100%;
+  z-index: 700;
+
+  background: white;
+
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: var(--c-accent);
+  text-align: center;
+}
+
+.Filter__togglerIcon {
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.Filter__togglerIcon_active {
+  transform: rotate(180deg);
+}
+
+.Filter__items {
+  position: absolute;
+  top: 40px;
+  transform: translate3d(0, -100%, 0);
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: auto;
+  width: 100%;
+  z-index: 600;
+
+  padding-top: 48px;
+
+  background: white;
+  color: white;
+
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.Filter__items_open {
+  transform: translate3d(0, 0, 0);
+  color: black;
+}
+
+.Filter__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 48px;
+
+  background: white;
+
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 18px;
+  border-bottom: 0.5px solid #e2e2e2;
+}
+
+.Filter__item_current {
+  background: rgba(0, 87, 255, 0.14);
+}
+
+.Filter__item:first-child {
+  border-top: 0.5px solid #e2e2e2;
+}
