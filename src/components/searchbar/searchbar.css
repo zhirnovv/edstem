@@ -1,0 +1,88 @@
+.Searchbar__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+
+  transform: translate3d(0, -100%, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  height: var(--o-xl-l);
+  background: white;
+
+  transition: transform 0.2s ease;
+}
+
+.Searchbar__container_open.Searchbar__container {
+  transform: translate3d(0, 0, 0);
+}
+
+.Searchbar {
+  position: relative;
+
+  display: flex;
+
+  height: 48px;
+  width: 100%;
+
+  padding: var(--o-sm-s);
+
+  background: white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.Searchbar__input {
+  height: 100%;
+  width: 100%;
+
+  margin-right: 3px;
+  padding-left: var(--o-sm-s);
+
+  appearance: none;
+  border-radius: 5px 0 0 5px;
+
+  box-shadow: none;
+  font-family: "Open Sans";
+  font-size: 18px;
+  background: #efefef;
+
+  transition: box-shadow 0.1s ease;
+}
+
+.Searchbar__input:focus {
+  box-shadow: 0 0 3px 2px var(--c-accent);
+}
+
+.Searchbar__submit {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  height: 100%;
+  width: 40px !important;
+  border-radius: 0 5px 5px 0;
+  background: #efefef;
+}
+
+.Searchbar__submit:focus {
+  box-shadow: 0 0 3px 2px var(--c-accent);
+}
+
+.Searchbar__submit:active {
+  background: rgba(126, 42, 155, 0.18);
+}
+
+.Searchbar__submitIcon {
+  position: absolute;
+
+  top: 12px;
+  right: 14px;
+
+  height: 24px;
+  width: 24px;
+  fill: black !important;
+}
