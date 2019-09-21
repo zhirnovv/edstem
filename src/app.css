@@ -1,0 +1,13 @@
+.Page__content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+
+  height: 100%;
+
+  transition: padding 0.2s ease;
+}
+
+.Page__content_withSearchbar {
+  padding-top: var(--o-md-l);
+}
