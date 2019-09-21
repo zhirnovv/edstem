@@ -1,13 +1,17 @@
 .Page__content {
+  position: relative;
+
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
 
   height: 100%;
 
+  padding-top: var(--o-md-l);
+
   transition: padding 0.2s ease;
 }
 
 .Page__content_withSearchbar {
-  padding-top: var(--o-md-l);
+  padding-top: var(--o-xl-l);
 }
