@@ -1,14 +1,14 @@
 <template>
   <nav class="Navbar__container">
-    <Dropdown v-bind:open="navbarOpen"></Dropdown>
-    <div class="Navbar" v-bind:class="{ Navbar_open: navbarOpen }">
+    <Dropdown v-bind:open="sharedState.navbarOpen"></Dropdown>
+    <div class="Navbar" v-bind:class="{ Navbar_open: sharedState.navbarOpen }">
       <Hamburger
-        v-bind:open="navbarOpen"
-        v-on:toggleNavbar="toggle('navbarOpen')"
+        v-bind:open="sharedState.navbarOpen"
+        v-on:toggleNavbar="toggleNavbar"
       ></Hamburger>
       <div class="Navbar__brand">{{ brand }}</div>
       <SearchButton
-        v-bind:open="searchbarOpen"
+        v-bind:open="sharedState.searchbarOpen"
         v-on:toggleSearchbar="toggleSearchbar"
       ></SearchButton>
     </div>
@@ -19,6 +19,7 @@
 import Dropdown from "./partials/dropdown/Dropdown";
 import Hamburger from "./partials/hamburger/Hamburger";
 import SearchButton from "./partials/searchButton/SearchButton";
+import { store } from "../../store/store";
 export default {
   name: "Navbar",
   components: {
@@ -30,18 +31,16 @@ export default {
     brand: String
   },
   data: () => ({
-    navbarOpen: false,
-    searchbarOpen: false
+    sharedState: store.state
   }),
   methods: {
-    toggle(state) {
-      this[state] = !this[state];
+    toggleNavbar() {
+      !this.sharedState.navbarOpen ? store.openNavbar() : store.closeNavbar();
     },
     toggleSearchbar() {
-      if (this.navbarOpen) {
-        this.toggle("navbarOpen");
-      }
-      this.toggle("searchbarOpen");
+      !this.sharedState.searchbarOpen
+        ? store.openSearchbar()
+        : store.closeSearchbar();
     }
   }
 };
