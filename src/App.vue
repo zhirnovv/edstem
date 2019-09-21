@@ -1,13 +1,19 @@
 <template>
-  <Navbar brand="Thread name"></Navbar>
+  <div>
+    <Searchbar></Searchbar>
+    <Navbar brand="Thread name"></Navbar>
+    <div>lololololo</div>
+  </div>
 </template>
 
 <script>
 import Navbar from "./components/navbar/Navbar";
+import Searchbar from "./components/searchbar/Searchbar";
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    Searchbar
   }
 };
 </script>
