@@ -5,7 +5,7 @@
   >
     <form class="Searchbar">
       <input class="Searchbar__input" placeholder="AVL Tree algorithm" />
-      <label htmlFor="search">
+      <label for="search">
         <svg
           class="Searchbar__submitIcon"
           viewBox="0 0 24 24"
@@ -18,7 +18,7 @@
           />
         </svg>
       </label>
-      <input name="search" type="submit" class="Searchbar__submit" value="" />
+      <input id="search" type="submit" class="Searchbar__submit" value="" />
     </form>
   </div>
 </template>
