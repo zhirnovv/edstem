@@ -1,7 +1,9 @@
 export const store = {
   state: {
     navbarOpen: false,
-    searchbarOpen: false
+    searchbarOpen: false,
+    filtersOpen: false,
+    currentFilter: "all"
   },
   openNavbar() {
     this.state.navbarOpen = true;
@@ -13,6 +15,9 @@ export const store = {
     if (this.state.navbarOpen) {
       this.state.navbarOpen = false;
     }
+    if (this.state.filtersOpen) {
+      this.state.filtersOpen = false;
+    }
     this.state.searchbarOpen = true;
   },
   closeSearchbar() {
@@ -22,5 +27,19 @@ export const store = {
       return;
     }
     this.state.searchbarOpen = false;
+  },
+  openFilters() {
+    console.log("opening filters");
+    if (this.state.searchbarOpen) {
+      this.state.searchbarOpen = false;
+    }
+    this.state.filtersOpen = true;
+  },
+  closeFilters() {
+    console.log("closing filters");
+    this.state.filtersOpen = false;
+  },
+  selectFilter(filter) {
+    this.state.currentFilter = filter;
   }
 };
