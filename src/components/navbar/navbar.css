@@ -3,6 +3,7 @@
 
   position: relative;
   height: var(--o-md-l);
+  background: white;
 }
 
 .Navbar {

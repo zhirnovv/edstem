@@ -35,7 +35,15 @@ export default {
   }),
   methods: {
     toggleNavbar() {
-      !this.sharedState.navbarOpen ? store.openNavbar() : store.closeNavbar();
+      if (!this.sharedState.navbarOpen) {
+        store.openNavbar();
+        document.documentElement.style.overflow = "hidden";
+      } else if (this.sharedState.navbarOpen && this.sharedState.filtersOpen) {
+        store.closeNavbar();
+      } else {
+        store.closeNavbar();
+        document.documentElement.style.overflow = "auto";
+      }
     },
     toggleSearchbar() {
       !this.sharedState.searchbarOpen
