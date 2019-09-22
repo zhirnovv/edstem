@@ -7,11 +7,11 @@
 
   height: 100%;
 
-  padding-top: var(--o-md-l);
+  padding-top: var(--o-md-m);
 
   transition: padding 0.2s ease;
 }
 
 .Page__content_withSearchbar {
-  padding-top: var(--o-xl-l);
+  padding-top: var(--o-xl-m);
 }

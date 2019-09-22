@@ -7,71 +7,7 @@
       v-bind:class="{ Page__content_withSearchbar: sharedState.searchbarOpen }"
     >
       <Filters></Filters>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <div>lololololo</div>
-      <button v-on:click="test">lol</button>
+      <Thread></Thread>
     </div>
   </div>
 </template>
@@ -80,6 +16,7 @@
 import Navbar from "./components/navbar/Navbar";
 import Searchbar from "./components/searchbar/Searchbar";
 import Filters from "./components/filters/Filters";
+import Thread from "./components/thread/Thread";
 import { store } from "./store/store";
 export default {
   name: "app",
@@ -89,7 +26,8 @@ export default {
   components: {
     Navbar,
     Searchbar,
-    Filters
+    Filters,
+    Thread
   },
   methods: {
     test() {
