@@ -1,0 +1,36 @@
+.Thread {
+  position: relative;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: calc(100vh - 88px);
+  width: 100%;
+
+  overflow: scroll;
+}
+
+.Thread__sectionTitle {
+  position: sticky;
+
+  top: 0;
+
+  display: flex;
+  align-items: center;
+
+  height: 32px;
+  width: 100%;
+
+  margin: 2px 0;
+  padding: var(--o-sm-m);
+
+  background: white;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+}
+/* .Thread__sectionTitle_withSearchbar {
+  top: 40px;
+} */
