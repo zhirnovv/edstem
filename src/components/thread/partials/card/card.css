@@ -1,0 +1,69 @@
+.Card {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-shrink: 0;
+  justify-content: flex-start;
+
+  height: 64px;
+  width: 100%;
+
+  padding: var(--o-sm-s) var(--o-sm-m);
+
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Card__upper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 40px;
+}
+
+.Card__lower {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  height: 24px;
+}
+
+.Card__title {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Card__type {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.Card__author {
+  flex-grow: 1;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: start;
+}
+
+.Card__subject {
+  flex-grow: 1;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.Card__stats {
+  flex-grow: 1;
+  font-family: "Open Sans";
+  font-size: 12px;
+  line-height: 16px;
+  text-align: end;
+}
