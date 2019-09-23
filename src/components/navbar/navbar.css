@@ -41,6 +41,7 @@
 }
 
 .Navbar_open.Navbar {
+  top: calc(100% - var(--o-md-l));
   border-radius: 12px 12px 0px 0px;
-  transform: translate3d(0, calc(100vh - var(--o-md-l)), 0);
+  /* transform: translate3d(0, calc(100vh - var(--o-md-l)), 0); */
 }
