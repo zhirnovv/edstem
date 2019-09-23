@@ -37,6 +37,7 @@ export default {
     toggleNavbar() {
       if (!this.sharedState.navbarOpen) {
         store.openNavbar();
+        document.documentElement.style.height = "100%";
         document.documentElement.style.overflow = "hidden";
       } else {
         store.closeNavbar();
