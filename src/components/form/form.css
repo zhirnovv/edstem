@@ -1,0 +1,297 @@
+.Form {
+  position: fixed;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  /* height: 100%; */
+  width: 100vw;
+  z-index: 1100;
+
+  padding: 0 var(--o-sm-m);
+
+  background: white;
+
+  transform: translate3d(0, 100%, 0);
+
+  transition: transform 0.2s ease;
+  will-change: transform;
+
+  overflow: scroll;
+}
+
+.Form_open.Form {
+  transform: translate3d(0, 0, 0);
+}
+
+.Form__appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: auto;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  height: var(--o-md-l);
+  width: 100%;
+  z-index: 1200;
+
+  padding: var(--o-sm-s) var(--o-sm-s);
+
+  background: var(--c-primary);
+  border-radius: 0px 0px 12px 12px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+
+  transform: translate3d(0, -100%, 0);
+
+  transition: transform 0.2s ease;
+  will-change: transform;
+}
+
+.Form__appbar_open.Form__appbar {
+  transform: translate3d(0, 0, 0);
+}
+
+.Form__closeButton {
+  position: fixed;
+  top: 6px;
+  left: 8px;
+
+  height: 34px;
+  width: 34px;
+  z-index: 1300;
+}
+
+.Form__appbarBrand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 100%;
+  z-index: 1200;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+
+  text-align: center;
+}
+
+.Form__label {
+  display: flex;
+
+  margin-top: var(--o-sm-m);
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.Form__radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 24px;
+
+  margin-top: 4px;
+
+  border-radius: 5px;
+  background: #efefef;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.Form__radio:focus {
+  outline: 2px solid rgba(0, 100, 255, 0.1);
+}
+
+.Form__radio_question {
+  color: #6a166a;
+  background: rgba(126, 42, 155, 0.18);
+}
+
+.Form__radio_discussion {
+  color: #003c99;
+  background-color: rgba(0, 100, 255, 0.1);
+}
+
+.Form__radio_announcement {
+  background-color: rgba(0, 210, 50, 0.1);
+  color: #006c1a;
+}
+
+.Form__input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  height: 40px;
+  width: 100%;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+  color: black;
+  background: #efefef;
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Form__textarea {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  min-height: 40px;
+  height: auto;
+  width: 100%;
+
+  padding: 8px;
+  margin-bottom: 16px;
+
+  box-sizing: border-box;
+  resize: vertical;
+  color: black;
+  background: #efefef;
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Form__selectContainer {
+  display: flex;
+  align-items: center;
+
+  margin-top: var(--o-sm-s);
+
+  height: 24px;
+  width: 100%;
+}
+
+.Form__selectLabel {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.Form__select {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  height: 24px;
+
+  padding: 0 var(--o-sm-s);
+  margin-left: var(--o-sm-s);
+
+  background: url("../../assets/icons/arrow.svg") 96% no-repeat #efefef;
+  border-radius: 5px;
+}
+
+.Form__selectIcon {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  height: 24px;
+  width: 24px;
+}
+
+.Form__checkboxContainer {
+  display: flex;
+
+  margin-top: 8px;
+}
+
+.Form__checkbox {
+  appearance: none;
+  height: 18px !important;
+  width: 18px !important;
+
+  border: 1px solid #c4c4c4;
+  border-radius: 3px !important;
+  background: #efefef !important;
+}
+
+.Form__checkbox_checked {
+  background: url("../../assets/icons/tick.svg") 50% no-repeat var(--c-primary) !important;
+  border: none !important;
+}
+
+.Form__checkboxLabel {
+  display: flex;
+  flex-flow: column nowrap;
+
+  margin-left: 6px;
+}
+
+.Form__checkboxLabel_primary {
+  font-family: "Open Sans";
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.Form__checkboxLabel_secondary {
+  font-family: "Open Sans";
+  font-size: 10px;
+  line-height: 14px;
+  color: #5f5f5f;
+}
+
+.Form__submit {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  width: 100% !important;
+  height: 32px;
+
+  margin: var(--o-sm-m) 0;
+
+  color: white;
+  background: var(--c-primary);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+}
