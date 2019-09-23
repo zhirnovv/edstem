@@ -120,6 +120,31 @@
   background: var(--c-accent);
 }
 
+.Card__action_leftIcon {
+  position: absolute;
+
+  top: 13%;
+  left: 17px;
+
+  height: 36px;
+  width: 36px;
+}
+
+.Card__action_leftLabel {
+  position: absolute;
+
+  bottom: 14%;
+  left: 0;
+  width: 70px;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
 .Card__action_right {
   position: absolute;
   right: 0;
@@ -130,4 +155,29 @@
   z-index: 300;
 
   background: var(--c-warning);
+}
+
+.Card__action_rightIcon {
+  position: absolute;
+
+  top: 12%;
+  right: 17px;
+
+  height: 36px;
+  width: 36px;
+}
+
+.Card__action_rightLabel {
+  position: absolute;
+
+  bottom: 14%;
+  right: 0;
+  width: 70px;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
 }

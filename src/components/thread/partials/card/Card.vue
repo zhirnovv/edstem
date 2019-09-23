@@ -1,7 +1,35 @@
 <template>
   <div class="Card">
-    <div class="Card__action_left"></div>
-    <div class="Card__action_right"></div>
+    <div class="Card__action_left">
+      <svg
+        viewBox="0 0 33 33"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="Card__action_leftIcon"
+      >
+        <path
+          d="M26.125 4.125H6.861c-1.526 0-2.722 1.224-2.722 2.75l-.014 19.25c0 1.512 1.21 2.75 2.736 2.75h19.264a2.758 2.758 0 0 0 2.75-2.75V6.875a2.75 2.75 0 0 0-2.75-2.75zm0 16.5h-5.5A4.128 4.128 0 0 1 16.5 24.75a4.128 4.128 0 0 1-4.125-4.125H6.861V6.875h19.264v13.75z"
+          fill="#fff"
+        />
+      </svg>
+      <div class="Card__action_leftLabel">Unread</div>
+    </div>
+    <div class="Card__action_right">
+      <svg
+        viewBox="0 0 33 33"
+        fill="none"
+        class="Card__action_rightIcon"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.5 23.746l8.497 5.129-2.255-9.666 7.508-6.504-9.886-.839L16.5 2.75l-3.864 9.116-9.886.839 7.508 6.504-2.255 9.666 8.497-5.129z"
+          fill="#fff"
+        />
+      </svg>
+      <div class="Card__action_rightLabel">
+        Star
+      </div>
+    </div>
     <div class="Card__content" v-pan="dragHandler" :style="style">
       <div class="Card__upper">
         <div class="Card__title">
