@@ -1,5 +1,5 @@
 <template>
-  <div class="Thread" v-on:scroll="handleScroll">
+  <div class="Thread">
     <div
       class="Thread__sectionTitle"
       v-bind:class="{
@@ -8,33 +8,36 @@
     >
       Pinned
     </div>
-    <Card></Card>
+    <Card title="Semester 3 Project guidelines" :type="0"></Card>
     <div class="Thread__sectionTitle">
       April 3rd 1989
     </div>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
+    <Card
+      title="How to use C++ lambda functions in comparators?"
+      :type="1"
+    ></Card>
+    <Card title="Grading system for Math 102" :type="2"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
     <div class="Thread__sectionTitle">
       July 23rd 1989
     </div>
-    <Card></Card>
-    <Card></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
     <div class="Thread__sectionTitle">
       December 28th 1991
     </div>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
     <div class="Thread__sectionTitle">
       December 28th 1991
     </div>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
-    <Card></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
+    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
   </div>
 </template>
 
@@ -48,38 +51,7 @@ export default {
   },
   data: () => ({
     sharedState: store.state
-  }),
-  methods: {
-    handleScroll: function() {
-      // let fixedElement, fixedElementIndex, nextElement;
-      // [...document.getElementsByClassName("Thread__sectionTitle")].map(
-      //   (element, index) => {
-      //     // get title that should be fixed right now
-      //     if (element.getBoundingClientRect().top <= 88) {
-      //       fixedElement = element;
-      //       fixedElementIndex = index;
-      //     }
-      //   }
-      // );
-      // fixedElement.style.position = "fixed";
-      // fixedElement.style.top = "88px";
-      // nextElement = document.getElementsByClassName("Thread__sectionTitle")[
-      //   fixedElementIndex + 1
-      // ];
-      // if (nextElement.getBoundingClientRect().top <= 120) {
-      //   fixedElement.style.position = "absolute";
-      //   fixedElement.style.top = "48px";
-      // }
-      // console.log(
-      //   fixedElementIndex,
-      //   fixedElementIndex + 1,
-      //   fixedElement.getBoundingClientRect().top
-      // );
-    }
-  },
-  mounted: function() {
-    this.handleScroll();
-  }
+  })
 };
 </script>
 

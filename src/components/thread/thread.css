@@ -7,9 +7,7 @@
   align-items: center;
 
   height: calc(100vh - 88px);
-  width: 100%;
-
-  overflow: scroll;
+  width: 100vw;
 }
 
 .Thread__sectionTitle {
@@ -21,7 +19,8 @@
   align-items: center;
 
   height: 32px;
-  width: 100%;
+  width: 100vw;
+  z-index: 400;
 
   margin: 2px 0;
   padding: var(--o-sm-m);
@@ -31,6 +30,3 @@
   font-weight: 600;
   font-size: 16px;
 }
-/* .Thread__sectionTitle_withSearchbar {
-  top: 40px;
-} */
