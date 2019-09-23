@@ -17,7 +17,7 @@
 
   background: white;
 
-  transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 120%, 0);
 
   transition: transform 0.2s ease;
   will-change: transform;
