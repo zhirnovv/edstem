@@ -1,69 +1,133 @@
 .Card {
+  position: relative;
+
+  width: 100vw;
+}
+
+.Card__content {
+  position: relative;
+
   display: flex;
   flex-flow: column nowrap;
   flex-shrink: 0;
   justify-content: flex-start;
 
-  height: 64px;
+  min-height: 70px;
   width: 100%;
-
-  padding: var(--o-sm-s) var(--o-sm-m);
+  z-index: 300;
 
   background: #ffffff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+  padding: 10px var(--o-sm-m);
+
+  transition: transform 0.1s ease;
+}
+
+.Card__unreadBadge {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 4px;
+
+  border-radius: 100%;
+
+  background: var(--c-accent);
 }
 
 .Card__upper {
+  position: relative;
+
+  flex-grow: 1;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
 
-  height: 40px;
+  height: 100%;
+  z-index: 400;
 }
 
 .Card__lower {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-end;
 
-  height: 24px;
+  height: 25px;
 }
 
 .Card__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
   font-family: "Open Sans";
   font-size: 14px;
   line-height: 19px;
 }
 
-.Card__type {
-  font-size: 12px;
-  line-height: 16px;
+.Card__badges {
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .Card__author {
-  flex-grow: 1;
+  flex: 1 1 0px;
   font-family: "Open Sans";
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
   text-align: start;
+  color: #868686;
 }
 
 .Card__subject {
-  flex-grow: 1;
+  flex: 1 1 0px;
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+
+  color: var(--c-success);
 }
 
 .Card__stats {
-  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  flex: 1 1 0px;
   font-family: "Open Sans";
   font-size: 12px;
   line-height: 16px;
   text-align: end;
+}
+
+.Card__action_left {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 70px;
+  z-index: 300;
+
+  background: var(--c-accent);
+}
+
+.Card__action_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  height: 100%;
+  width: 70px;
+  z-index: 300;
+
+  background: var(--c-warning);
 }
