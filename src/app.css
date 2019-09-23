@@ -6,6 +6,7 @@
   justify-content: flex-start;
 
   height: 100%;
+  z-index: 600;
 
   padding-top: var(--o-md-m);
 
