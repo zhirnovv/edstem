@@ -3,6 +3,7 @@ export const store = {
     navbarOpen: false,
     searchbarOpen: false,
     filtersOpen: false,
+    formOpen: false,
     currentFilter: "all"
   },
   openNavbar() {
@@ -41,5 +42,13 @@ export const store = {
   },
   selectFilter(filter) {
     this.state.currentFilter = filter;
+  },
+  openForm() {
+    console.log("opening form");
+    this.state.formOpen = true;
+  },
+  closeForm() {
+    console.log("closing form");
+    this.state.formOpen = false;
   }
 };
