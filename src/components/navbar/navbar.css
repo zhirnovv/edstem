@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
+  width: 100vw;
   height: var(--o-md-l);
 
   background: var(--c-primary);
