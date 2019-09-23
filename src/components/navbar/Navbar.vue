@@ -38,17 +38,19 @@ export default {
       if (!this.sharedState.navbarOpen) {
         store.openNavbar();
         document.documentElement.style.overflow = "hidden";
-      } else if (this.sharedState.navbarOpen && this.sharedState.filtersOpen) {
-        store.closeNavbar();
       } else {
         store.closeNavbar();
         document.documentElement.style.overflow = "auto";
       }
     },
     toggleSearchbar() {
-      !this.sharedState.searchbarOpen
-        ? store.openSearchbar()
-        : store.closeSearchbar();
+      if (!this.sharedState.searchbarOpen) {
+        store.openSearchbar();
+        document.documentElement.style.overflow = "auto";
+      } else {
+        store.closeSearchbar();
+        document.documentElement.style.overflow = "auto";
+      }
     }
   }
 };
