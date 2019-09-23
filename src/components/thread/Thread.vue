@@ -30,14 +30,6 @@
     <Card title="Lorem ipsum ist dolor" :type="0"></Card>
     <Card title="Lorem ipsum ist dolor" :type="0"></Card>
     <Card title="Lorem ipsum ist dolor" :type="0"></Card>
-    <div class="Thread__sectionTitle">
-      December 28th 1991
-    </div>
-    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
-    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
-    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
-    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
-    <Card title="Lorem ipsum ist dolor" :type="0"></Card>
   </div>
 </template>
 
