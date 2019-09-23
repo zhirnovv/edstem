@@ -39,9 +39,11 @@ export default {
         store.openNavbar();
         document.documentElement.style.height = "100%";
         document.documentElement.style.overflow = "hidden";
+        document.documentElement.style.position = "relative";
       } else {
         store.closeNavbar();
         document.documentElement.style.overflow = "auto";
+        document.documentElement.style.position = "static";
       }
     },
     toggleSearchbar() {
