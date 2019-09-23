@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="position: relative; min-height: 100%;">
     <Searchbar></Searchbar>
     <Navbar brand="Thread name"></Navbar>
     <div
@@ -8,7 +8,9 @@
     >
       <Filters></Filters>
       <Thread></Thread>
+      <Fab></Fab>
     </div>
+    <Form></Form>
   </div>
 </template>
 
@@ -17,6 +19,8 @@ import Navbar from "./components/navbar/Navbar";
 import Searchbar from "./components/searchbar/Searchbar";
 import Filters from "./components/filters/Filters";
 import Thread from "./components/thread/Thread";
+import Form from "./components/form/Form";
+import Fab from "./components/fab/Fab";
 import { store } from "./store/store";
 export default {
   name: "app",
@@ -27,12 +31,9 @@ export default {
     Navbar,
     Searchbar,
     Filters,
-    Thread
-  },
-  methods: {
-    test() {
-      console.log("test");
-    }
+    Thread,
+    Form,
+    Fab
   }
 };
 </script>
